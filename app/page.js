@@ -1,4 +1,4 @@
-import Products from "@/components/Products";
+import ProductsAll from "@/components/ProductsAll";
 import { getData } from "@/lib/data";
 
 export default function Home() {
@@ -7,7 +7,7 @@ export default function Home() {
 
   return (
     <div className=" px-5  mx-auto">
-      <Products products={products} />
+      <ProductsAll products={products} />
     </div>
   );
 }

@@ -43,7 +43,7 @@ const ProductsAll = ({ products }) => {
                 {product?.description}
               </p>
 
-              <p className="text-rose-600 text-sm mt-4">
+              <p className="text-rose-600 text-xl font-semibold mt-4">
                 <span className="text-[#919090] line-through">
                   ${product.discountPercentage}
                 </span>{" "}

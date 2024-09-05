@@ -41,7 +41,7 @@ const Prod = ({ params: { id } }) => {
             <h1 className="italic text-xl lg:text-3xl font-serif font-semibold">
               {details?.title}
             </h1>
-            <span className="text-[#919090] my-3">
+            <span className="text-green-500 font-semibold underline my-3">
               {" "}
               <Link href={`/category/${details?.category}`}>
                 {details.category}

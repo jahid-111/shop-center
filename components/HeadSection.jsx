@@ -4,7 +4,7 @@ import Header from "./Header";
 
 const HeadSection = () => {
   return (
-    <div className=" bg-gray-500">
+    <div className=" bg-gray-100">
       <NavSection />
       <Header />
     </div>

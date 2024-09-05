@@ -1,5 +1,6 @@
 import Link from "next/link";
-import React from "react";
+import React, { Suspense } from "react";
+import Loading from "./Loading";
 
 const Categories = ({ category }) => {
   console.log(category[0].thumbnail);
@@ -7,12 +8,14 @@ const Categories = ({ category }) => {
     <div className="grid grid-cols-3 gap-4  justify-center items-center">
       {category?.map((product) => (
         <div key={product.id} className=" border shadow-lg">
-          <div
-            className="relative delay-150 w-[180px] lg:w-full h-[205px] lg:h-[310px] bg-[#f8f8f8] bg-cover bg-center transition-all duration-3000 ease-in-out transform"
-            style={{
-              backgroundImage: `url(${product?.thumbnail})`,
-            }}
-          ></div>
+          <Suspense fallback={<Loading />}>
+            <div
+              className="relative delay-150 w-[180px] lg:w-full h-[205px] lg:h-[310px] bg-[#f8f8f8] bg-cover bg-center transition-all duration-3000 ease-in-out transform"
+              style={{
+                backgroundImage: `url(${product?.thumbnail})`,
+              }}
+            ></div>
+          </Suspense>
           <div className=" p-1">
             <h2 className="text-sm lg:text-base mt-2">
               <Link

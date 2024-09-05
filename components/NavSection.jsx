@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const NavSection = () => {
@@ -14,14 +15,14 @@ const NavSection = () => {
             className="lg:hidden w-5 h-5"
           />
 
-          <a href="home">
+          <Link href="/">
             <Image
               width={100}
               height={100}
               alt="Logo"
               src="/assets/lws-logo-black.svg"
             />
-          </a>
+          </Link>
         </div>
       </div>
       <div className="flex items-center justify-end gap-2 lg:gap-5 lg:w-4/12">

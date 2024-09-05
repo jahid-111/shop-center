@@ -1,5 +1,6 @@
 import { getData } from "@/lib/data";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const Prod = ({ params: { id } }) => {
@@ -40,7 +41,12 @@ const Prod = ({ params: { id } }) => {
             <h1 className="italic text-xl lg:text-3xl font-serif font-semibold">
               {details?.title}
             </h1>
-            <span className="text-[#919090] my-3">{details.category}</span>
+            <span className="text-[#919090] my-3">
+              {" "}
+              <Link href={`/category/${details?.category}`}>
+                {details.category}
+              </Link>
+            </span>
 
             <div className="mt-3 flex items-center justify-start gap-1">
               {details?.reviews?.map((customer, i) => (

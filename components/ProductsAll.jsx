@@ -30,7 +30,9 @@ const ProductsAll = ({ products }) => {
                   {product?.title}
                 </Link>{" "}
                 <span className="text-[#919090] text-sm">
-                  <a href="./category.html">( {product?.category})</a>
+                  <Link href={`/category/${product?.category}`}>
+                    ( {product?.category} )
+                  </Link>
                 </span>
               </h2>
 
